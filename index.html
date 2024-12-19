@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Systems of Cosmere</title>
+    <meta name="title" content="Systems of Cosmere" />
+    <meta name="description" content="Interactive map of Cosmere systems" />
+    <meta name="keywords" content="cosmere, systems" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      names="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
+    <!-- END: Web App -->
+
+    <!-- UA and Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport" />
+    <!-- END: UA and Viewport -->
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet" />
+    <!-- END: Fonts -->
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/systems.css" />
+
+    <style class="animation_box"></style>
+    <style>
+      ::-webkit-scrollbar {
+        width: 0px;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  </head>
+  <body>
+    <section id="intro">
+      <div class="content">
+        <img src="./img/logo.png" alt="Logo of Cosmere systems" />
+        <div class="text">
+          <p>
+            Cosmere is the word that defines the universe in which many of
+            Brandon Sanderson's books take place. That is, although the stories
+            take place on different worlds, each of these is in the same galaxy,
+            or star cluster.
+          </p>
+          <p>
+            This website is an astral map of the existing constellations on
+            which all the information known to date is compiled.
+          </p>
+        </div>
+
+        <button id="btn_start">Enter</button>
+      </div>
+    </section>
+
+    <section id="info">
+      <div class="info_btn--close"></div>
+    </section>
+
+    <main id="main">
+      <section>
+        <div class="logo_cosmere">
+          <img src="./img/logo.png" alt="" />
+        </div>
+        <div class="logo_cosmere__rings">
+          <div class="ring asteroids"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring asteroid_belt"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+        </div>
+      </section>
+
+      <section class="grid"></section>
+
+      <section class="constellations">
+        <div class="constellation constellation-scadrian_nalthian"></div>
+        <div class="constellation constellation-rosharan"></div>
+        <div class="constellation constellation-selish"></div>
+        <div class="constellation constellation-drominad"></div>
+        <div class="constellation constellation-taldain"></div>
+        <div class="constellation constellation-threnodite"></div>
+        <div class="constellation constellation-dragon"></div>
+      </section>
+
+      <section class="systems">
+        <div class="system system--scadrian" id="scadrian">
+          <div
+            class="system__content"
+            data-systemX="-736"
+            data-systemY="-332"></div>
+          <div class="system__sun_content">
+            <div class="sun"></div>
+            <h4>Scadrian system</h4>
+          </div>
+        </div>
+        <div class="system system--taldain" id="taldain">
+          <div
+            class="system__content"
+            data-systemX="508"
+            data-systemY="20"></div>
+          <div class="system__sun_content">
+            <div class="sun"></div>
+            <h4>Taldain system</h4>
+          </div>
+        </div>
+        <div class="system system--threnodite" id="threnodite">
+          <div
+            class="system__content"
+            data-systemX="-77"
+            data-systemY="-446"></div>
+          <div class="system__sun_content">
+            <div class="sun"></div>
+            <h4>Threnodite system</h4>
+          </div>
+        </div>
+        <div class="system system--nalthian" id="nalthian">
+          <div
+            class="system__content"
+            data-systemX="-808"
+            data-systemY="-83"></div>
+          <div class="system__sun_content">
+            <div class="sun"></div>
+            <h4>Nalthian system</h4>
+          </div>
+        </div>
+        <div class="system system--rosharan" id="rosharan">
+          <div
+            class="system__content"
+            data-systemX="-699"
+            data-systemY="441"></div>
+          <div class="system__sun_content">
+            <div class="sun"></div>
+            <h4>Rosharan system</h4>
+          </div>
+        </div>
+        <div class="system system--selish" id="selish">
+          <div
+            class="system__content"
+            data-systemX="158"
+            data-systemY="406"></div>
+          <div class="system__sun_content">
+            <div class="sun"></div>
+            <h4>Selish system</h4>
+          </div>
+        </div>
+        <div class="system system--drominad" id="drominad">
+          <div
+            class="system__content"
+            data-systemX="561"
+            data-systemY="335"></div>
+          <div class="system__sun_content">
+            <div class="sun"></div>
+            <h4>Drominad system</h4>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="btn_nav">
+      <button id="btn_cfullscreen">fullscreen</button>
+      <button id="btn_quit">Quit</button>
+    </nav>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
